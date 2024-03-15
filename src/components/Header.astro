@@ -1,0 +1,89 @@
+---
+console.log("javascript")
+import HeaderButton from "../components/HeaderButton.astro";
+---
+
+<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+    <div class="mx-auto text-center mb-8 lg:mb-16">
+        <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+            Warhammer Club Master 
+        </h2>
+        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-500">
+            Toda la información acerca del Club
+        </p>
+    </div>
+
+    <nav class=" flex flex-col items-center justify-between w-full text-center
+    md:flex-row">
+        <HeaderButton class="text-white" href="/">
+            Últimas noticias
+        
+            <svg 
+                slot="before" 
+                width="24"  
+                height="24"  
+                viewBox="0 0 24 24"  
+                fill="none"  
+                stroke="currentColor"  
+                stroke-width="2"  
+                stroke-linecap="round"  
+                stroke-linejoin="round"  
+                class="icon icon-tabler icons-tabler-outline icon-tabler-news">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+            <path d="M8 8l4 0" />
+            <path d="M8 12l4 0" />
+            <path d="M8 16l4 0" />
+            
+            </svg>
+        </HeaderButton>
+            
+        <HeaderButton class="text-white" href="/about">
+            Sobre el proyecto
+            <svg    
+                slot="before" 
+                width="24" 
+                height="24"  
+                viewBox="0 0 24 24"  
+                fill="none"  
+                stroke="currentColor"  
+                stroke-width="2"  
+                stroke-linecap="round"  
+                stroke-linejoin="round"  
+                class="icon icon-tabler icons-tabler-outline icon-tabler-info-hexagon">
+                
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 
+            -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 
+            -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 
+            2.25 0l6.75 3.98h-.033z" />
+            <path d="M12 9h.01" />
+            <path d="M11 12h1v4h1" />
+            
+            </svg>
+        </HeaderButton>
+        
+        <HeaderButton class="text-white" href="/oldest">
+            Noticias sobre bandas
+            <svg  
+                slot="before"  
+                width="24"  
+                height="24"  
+                viewBox="0 0 24 24"  
+                fill="none"  
+                stroke="currentColor"  
+                stroke-width="2"  
+                stroke-linecap="round"  
+                stroke-linejoin="round"  
+                class="icon icon-tabler icons-tabler-outline icon-tabler-karate">
+                
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> 
+            <path d="M3 9l4.5 1l3 2.5" />
+            <path d="M13 21v-8l3 -5.5" />   
+            <path d="M8 4.5l4 2l4 1l4 3.5l-2 3.5" />
+            
+            </svg>
+        </HeaderButton>
+    
+    </nav>
+</header>
