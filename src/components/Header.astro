@@ -15,7 +15,8 @@ import HeaderButton from "../components/HeaderButton.astro";
 
     <nav class=" flex flex-col items-center justify-between w-full text-center
     md:flex-row">
-        <HeaderButton class="text-white" href="/">
+    <a href="/">    
+    <HeaderButton class="text-white">
             Últimas noticias
         
             <svg 
@@ -37,8 +38,9 @@ import HeaderButton from "../components/HeaderButton.astro";
             
             </svg>
         </HeaderButton>
-            
-        <HeaderButton class="text-white" href="/about">
+    </a>
+    <a href="/about"> 
+        <HeaderButton class="text-white" href="">
             Sobre el proyecto
             <svg    
                 slot="before" 
@@ -62,8 +64,9 @@ import HeaderButton from "../components/HeaderButton.astro";
             
             </svg>
         </HeaderButton>
-        
-        <HeaderButton class="text-white" href="/oldest">
+    </a> 
+    <a href="/oldest">
+        <HeaderButton class="text-white">
             Noticias sobre bandas
             <svg  
                 slot="before"  
@@ -84,6 +87,6 @@ import HeaderButton from "../components/HeaderButton.astro";
             
             </svg>
         </HeaderButton>
-    
+    </a>
     </nav>
 </header>

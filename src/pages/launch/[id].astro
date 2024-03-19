@@ -3,6 +3,8 @@ import type { GetStaticPaths } from "astro";
 import { getLaunchBy, getLatestLaunches } from "../../services/spacex";
 import Layout from "../../layouts/Layout.astro";
 
+export const prerender = false
+
 const { id } = Astro.params;
 
 let launch;
@@ -19,15 +21,22 @@ export async function getStaticPaths() {
 
     const launches = await getLatestLaunches();
 
+    // Esto no te sirve para una página dinámica, además
+    // se suele utilizar para cuando conocemos la cantidad de páginas que se pueden generar
+    // antes de que el usuario navegue (10, 50 incluso 100) pero con mas no tendría sentido
     return launches.map((launch) => ({
         params: { id: launch.id },
     }));
 }
-console.log(launch);
 ---
 
 <Layout title=`Launch ${id}`>
-    <article>
-        {launch?.id}
+    <article class="flex gap-y-4 flex-col ">
+        <img class="w-52 h-auto" src={launch?.links?.patch.small} alt={launch?.name} />
+
+        <h2 class="text-4xl text-white font-bold">
+            Launch #{launch?.flight_number}
+        </h2>
+        <p class="text-lg">{launch?.details}</p>
     </article>
 </Layout>
